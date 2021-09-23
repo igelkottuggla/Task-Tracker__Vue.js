@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        />
+        <title>Random User Generator</title>
+    </head>
+    <body>
+        <div class="block bcg-black"></div>
+
+        <div id="app">
+            <div class="block">
+                <div class="container">
+                    <img :class="gender" :src="picture" :alt="`${firstName} ${lastName}`" />
+                    <h1>{{firstName}} {{lastName}}</h1>
+                    <p>Email: {{email}}</p>
+
+                    <button :class="gender" v-on:click="getUser()">Get random user</button>
+                </div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/vue@3.0.5"></script>
+        <script src="./app.js"></script>
+    </body>
+</html>
